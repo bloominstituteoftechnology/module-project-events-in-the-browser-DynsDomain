@@ -75,13 +75,16 @@ function moduleProject2() {
       let isRight = evt.key === keys.right
       let isSpacebar = evt.key === keys.space
 
-      if (isUp) {
-        console.log('you clicked Up')
-      } else if (isDown) {
+      if (isUp) { 
         if (targeted.parentElement.previousElementSibling) {
           let idx = Array.from(targeted.parentElement.children).indexOf(targeted)
           targeted.classList.remove('targeted')
           targeted.parentElement.previousElementSibling.children[idx].classList.add('targeted')
+      } else if (isDown) {
+        if (targeted.parentElement.nextElementSibling) {
+          let idx = Array.from(targeted.parentElement.children).indexOf(targeted)
+          targeted.classList.remove('targeted')
+          targeted.parentElement.nextElementSibling.children[idx].classList.add('targeted')
         }
       } else if (isLeft) {
         if (targeted.previousElementSibling) {
