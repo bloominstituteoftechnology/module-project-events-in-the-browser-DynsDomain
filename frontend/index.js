@@ -97,7 +97,7 @@ function moduleProject2() {
           targeted.nextElementSibling.classList.add('targeted')
         }
       }
-          
+      }      
     // 👉 TASK 4 - Use the space bar to exterminate a mosquito 👈
     else if (isSpacebar) {
       let mosquito = targeted.firstChild
@@ -108,7 +108,7 @@ function moduleProject2() {
       }
     }
     // 👉 TASK 5 - End the game 👈
-    console.log('you clicked down a key')
+    
 
     let liveMosquitos = document.querySelectorAll('[data-status-alive]')
     if(!liveMosquitos.length) {
